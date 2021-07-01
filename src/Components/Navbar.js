@@ -6,7 +6,7 @@ function Navbar() {
     <nav>
       <h1>Devices</h1>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
