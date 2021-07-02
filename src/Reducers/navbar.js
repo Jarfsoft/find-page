@@ -1,6 +1,6 @@
 const defaultState = {
   user: 0,
-  page: 'Device',
+  page: 'Devices',
 };
 
 const navbar = (state = defaultState, action) => {
@@ -12,7 +12,7 @@ const navbar = (state = defaultState, action) => {
       return newState;
     case 'PAGE':
       newState.user = state.user;
-      newState.paga = action.payload;
+      newState.page = action.payload;
       return newState;
     default:
       return state;
