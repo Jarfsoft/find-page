@@ -1,3 +1,17 @@
 nav {
+  display: flex;
+  justify-content: space-around;
   text-align: center;
+  font-size: small;
+}
+
+nav a {
+  text-decoration: none;
+  color: gray;
+  margin: 1.5rem 0;
+}
+
+h1 {
+  font-size: small;
+  margin: 1.5rem 0;
 }
