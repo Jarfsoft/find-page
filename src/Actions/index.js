@@ -10,6 +10,10 @@ const actions = {
   logout: () => ({
     type: 'LOGOUT',
   }),
+  devices: (data) => ({
+    type: 'DEVICES',
+    payload: data,
+  }),
 };
 
 export default actions;
