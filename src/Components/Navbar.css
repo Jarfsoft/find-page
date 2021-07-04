@@ -3,6 +3,7 @@ nav {
   justify-content: space-around;
   text-align: center;
   font-size: small;
+  background-color: rgb(240, 240, 240);
 }
 
 nav a {

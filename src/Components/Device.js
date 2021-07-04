@@ -2,7 +2,7 @@
 
 import { React } from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './Device.css';
 
@@ -10,8 +10,8 @@ function Device({ data }) {
   return (
     <div className="device-card">
       <img alt="Device" src={data ? data.image_url : ''} />
-      <div>
-        {/* <Link to={}>{data ? data.name : ''}</Link> */}
+      <div className="info">
+        <Link to={`/device/${data.id}`}>{data ? data.name : ''}</Link>
         <span>{data ? `$ ${data.price}` : ''}</span>
       </div>
     </div>
