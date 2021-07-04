@@ -1,11 +1,18 @@
 .details-frame {
-  width: 80%;
-  margin: 0 3rem 1.5rem;
-  background-color: white
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  background-color: white;
 }
 
 .details-frame img {
   width: 100%;
+}
+
+.details-frame p,
+.details-frame h1 {
+  padding: 0 2rem;
+  font-size: small;
 }
 
 .image-container {

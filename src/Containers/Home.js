@@ -18,7 +18,15 @@ function Home() {
   }, []);
   return (
     <div className="App">
-      {devices.map((d) => <Device key={d.name} data={d} />)}
+      {devices.map((d) => (
+        <Device
+          key={d.name}
+          imageUrl={d.image_url}
+          id={d.id}
+          name={d.name}
+          price={d.price}
+        />
+      ))}
     </div>
   );
 }
