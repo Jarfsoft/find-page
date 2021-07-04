@@ -10,8 +10,10 @@ function Signup() {
   const [name, setName] = useState();
   const user = useSelector((state) => state.users.userId);
   const dispatch = useDispatch();
+  const [errors, setErrors] = useState([]);
   const setUser = (n) => {
-    dispatch(actions.login(n));
+    if (n.status === 'ERROR') setErrors([...n.data.name]);
+    else dispatch(actions.login({ id: n.data.id, name: n.data.name }));
   };
   const submitHandler = (e) => {
     e.preventDefault();
@@ -35,6 +37,12 @@ function Signup() {
       <input id="name" required type="text" name="name" value={name} onChange={changeHandler} />
       <br />
       <input className="submit-btn" type="submit" value="Sign up" />
+      {errors ? errors.map((e) => (
+        <>
+          <p>{e}</p>
+          <br />
+        </>
+      )) : ''}
     </form>
   );
 }

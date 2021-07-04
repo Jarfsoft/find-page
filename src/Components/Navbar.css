@@ -1,18 +1,18 @@
-nav {
+.nav {
   display: flex;
   justify-content: space-around;
   text-align: center;
   font-size: small;
-  background-color: rgb(240, 240, 240);
 }
 
-nav a {
+.nav a {
   text-decoration: none;
   color: gray;
   margin: 1.5rem 0;
 }
 
-h1 {
+.head {
   font-size: small;
+  font-weight: bold;
   margin: 1.5rem 0;
 }

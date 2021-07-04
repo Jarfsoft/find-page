@@ -5,7 +5,7 @@ const getUser = (name, setUser) => {
       const user = json.data.filter((u) => u.name === name)[0];
       if (user) {
         setUser({ id: user.id, name: user.name });
-      }
+      } else setUser(undefined);
     });
 };
 
@@ -17,7 +17,7 @@ const postUser = (user, setUser) => {
     },
     body: JSON.stringify({ name: user }),
   }).then((res) => res.json()).then((json) => {
-    if (json.status === 'SUCCESS') setUser({ id: json.data.id, name: json.data.name });
+    setUser(json);
   });
 };
 

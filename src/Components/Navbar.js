@@ -18,9 +18,9 @@ function Navbar() {
   };
 
   return (
-    <nav>
+    <nav className="nav">
       <Link to="/favorites">Favorites</Link>
-      <h1>{header || ''}</h1>
+      <h1 className="head">{header || ''}</h1>
       {rightButton()}
     </nav>
   );
