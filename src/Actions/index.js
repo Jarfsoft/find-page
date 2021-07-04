@@ -14,6 +14,13 @@ const actions = {
     type: 'DEVICES',
     payload: data,
   }),
+  favorites: (data) => ({
+    type: 'FAVORITES',
+    payload: data,
+  }),
+  empty: () => ({
+    type: 'EMPTY',
+  }),
 };
 
 export default actions;

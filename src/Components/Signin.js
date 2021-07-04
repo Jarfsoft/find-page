@@ -4,6 +4,7 @@ import { useHistory } from 'react-router';
 
 import { getUser } from '../userApi';
 import actions from '../Actions';
+import { getFavorites } from '../favoriteAPI';
 import './Signin.css';
 
 function Signin() {
@@ -19,9 +20,14 @@ function Signin() {
   };
   const history = useHistory();
 
+  const setFavorites = (f) => {
+    dispatch(actions.favorites(f));
+  };
+
   useEffect(() => {
     if (user !== 0) {
       history.push('/');
+      getFavorites(setFavorites);
     }
   }, [user]);
 
