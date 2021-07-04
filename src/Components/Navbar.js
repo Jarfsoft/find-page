@@ -6,23 +6,21 @@ import actions from '../Actions/index';
 import './Navbar.css';
 
 function Navbar() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const header = useSelector((state) => state.navbar.page);
-  const user = useSelector((state) => state.navbar.user);
+  const user = useSelector((state) => state.users.userId);
   const signout = () => {
-    dispatch(actions.user(0));
+    dispatch(actions.logout);
   };
   const rightButton = () => {
-    if(header === 'Devices')
-      return (user !== 0 ? <a onClick={signout}>Sign out</a> : <Link to={'/start'}>Get in</Link>);
-    else
-      return (<Link to={'/'}>Home</Link>);
-  }
+    if (header === 'Devices') return (user !== 0 ? <a href="/" onClick={signout}>Sign out</a> : <Link to="/start">Get in</Link>);
+    return (<Link to="/">Home</Link>);
+  };
 
   return (
     <nav>
-      <Link to={'/favorites'}>Favorites</Link>
-      <h1>{header ? header : ''}</h1>
+      <Link to="/favorites">Favorites</Link>
+      <h1>{header || ''}</h1>
       {rightButton()}
     </nav>
   );

@@ -10,17 +10,19 @@ function Getin() {
   const dispatch = useDispatch();
   dispatch(actions.page('Get in'));
   const [signin, setSignin] = useState(true);
-  const clickHandler = () => {
+  const clickHandler = (e) => {
+    e.preventDefault();
     setSignin(!signin);
-  }
+  };
+  const renderButton = (text) => (<a href="/" type="button" onClick={clickHandler}>{text}</a>);
   return (
     <>
-      <div className="buttons-top">
-        {signin ? <button onClick={clickHandler}>Sign up</button> : <button onClick={clickHandler}>Sign in</button>}
-      </div>
       {signin ? <Signin /> : <Signup />}
+      <div className="buttons-top">
+        {signin ? renderButton('Sign up') : renderButton('Sign in')}
+      </div>
     </>
-  )
+  );
 }
 
-export default Getin
+export default Getin;

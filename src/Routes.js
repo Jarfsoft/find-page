@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from './Containers/Home';
 import Navbar from './Components/Navbar';
-import Getin from './Containers/Getin'
+import Getin from './Containers/Getin';
 
 const Routes = () => (
   <BrowserRouter>
