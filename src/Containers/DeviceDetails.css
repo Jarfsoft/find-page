@@ -1,0 +1,9 @@
+.details-frame {
+  width: 80%;
+  margin: 0 3rem 1.5rem;
+  background-color: white
+}
+
+.details-frame img {
+  width: 100%;
+}
