@@ -10,8 +10,7 @@ function DeviceDetails() {
   const user = useSelector((state) => state.users);
   const dispatch = useDispatch();
   const params = useParams();
-  const data = useSelector((state) => state.devices); //.find((d) => d.id.toString() === params.id);
-  console.log(user);
+  const data = useSelector((state) => state.devices).find((d) => d.id.toString() === params.id);
   dispatch(actions.page(data.name));
   const favorites = useSelector((state) => state.favorites).filter(
     (f) => f.device_ID === parseInt(params.id, 10) && f.user_ID === user.userId,
