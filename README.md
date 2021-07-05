@@ -2,7 +2,7 @@
 
 > Aplication created with React and Redux for the Front-end and Rails was used to manage the Back-end. With this app you can browse between some home electronic home devices. There is a sign in and create acount feature. You can save your favorite devices in your account.
 
-![screenshot]()
+![screenshot](./screenshot.png)
 
 ## Built
 
@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[Live Demo]()
+[Live Demo](https://find-your-device.netlify.app/)
 
 
 ## Getting Started
