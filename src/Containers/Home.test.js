@@ -10,7 +10,7 @@ import Home from './Home';
 describe('Home render', () => {
   const mockStore = configureStore();
   let store;
-  const state = { 
+  const state = {
     devices: [],
   };
 
@@ -23,7 +23,7 @@ describe('Home render', () => {
             <BrowserRouter>
               <Home />
             </BrowserRouter>
-          </Provider>
+          </Provider>,
         ).toJSON();
       expect(home).toMatchSnapshot();
     });
@@ -35,11 +35,10 @@ describe('Home render', () => {
           <BrowserRouter>
             <Home />
           </BrowserRouter>
-        </Provider>
+        </Provider>,
       );
       const div = home.container.querySelectorAll('div');
       expect(div).toHaveLength(1);
     });
   });
 });
-

@@ -10,7 +10,7 @@ import Signup from './Signup';
 describe('Navbar render', () => {
   const mockStore = configureStore();
   let store;
-  const state = { 
+  const state = {
     users: {
       userId: 0,
       name: '',
@@ -26,7 +26,7 @@ describe('Navbar render', () => {
             <BrowserRouter>
               <Signup />
             </BrowserRouter>
-          </Provider>
+          </Provider>,
         ).toJSON();
       expect(signup).toMatchSnapshot();
     });

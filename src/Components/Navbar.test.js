@@ -10,7 +10,7 @@ import Navbar from './Navbar';
 describe('Navbar render', () => {
   const mockStore = configureStore();
   let store;
-  const state = { 
+  const state = {
     navbar: {
       page: 'Devices',
     },
@@ -29,7 +29,7 @@ describe('Navbar render', () => {
             <BrowserRouter>
               <Navbar />
             </BrowserRouter>
-          </Provider>
+          </Provider>,
         ).toJSON();
       expect(navbar).toMatchSnapshot();
     });
@@ -42,7 +42,7 @@ describe('Navbar render', () => {
           <BrowserRouter>
             <Navbar />
           </BrowserRouter>
-        </Provider>
+        </Provider>,
       );
       const header = navbar.container.querySelector('h1');
       expect(header.textContent).toBe('Devices');
@@ -53,7 +53,7 @@ describe('Navbar render', () => {
           <BrowserRouter>
             <Navbar />
           </BrowserRouter>
-        </Provider>
+        </Provider>,
       );
       const link = navbar.container.querySelectorAll('a');
       expect(link).toHaveLength(2);

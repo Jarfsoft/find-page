@@ -10,7 +10,7 @@ import Favorites from './Favorites';
 describe('Favorites render', () => {
   const mockStore = configureStore();
   let store;
-  const state = { 
+  const state = {
     devices: [],
     favorites: [],
   };
@@ -24,7 +24,7 @@ describe('Favorites render', () => {
             <BrowserRouter>
               <Favorites />
             </BrowserRouter>
-          </Provider>
+          </Provider>,
         ).toJSON();
       expect(favorites).toMatchSnapshot();
     });
@@ -36,7 +36,7 @@ describe('Favorites render', () => {
           <BrowserRouter>
             <Favorites />
           </BrowserRouter>
-        </Provider>
+        </Provider>,
       );
       const div = favorites.container.querySelectorAll('div');
       expect(div).toHaveLength(1);

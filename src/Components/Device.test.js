@@ -10,7 +10,7 @@ import Device from './Device';
 describe('Navbar render', () => {
   const mockStore = configureStore();
   let store;
-  const state = { 
+  const state = {
     devices: [],
   };
 
@@ -21,14 +21,14 @@ describe('Navbar render', () => {
         .create(
           <Provider store={store}>
             <BrowserRouter>
-            <Device
-              imageUrl={'image'}
-              id={'id'}
-              name={'name'}
-              price={'price'}
-            />
+              <Device
+                imageUrl="image"
+                id="id"
+                name="name"
+                price="price"
+              />
             </BrowserRouter>
-          </Provider>
+          </Provider>,
         ).toJSON();
       expect(device).toMatchSnapshot();
     });
@@ -39,10 +39,10 @@ describe('Navbar render', () => {
       <BrowserRouter>
         <Provider store={store}>
           <Device
-            imageUrl={'image'}
-            id={'id'}
-            name={'name'}
-            price={'price'}
+            imageUrl="image"
+            id="id"
+            name="name"
+            price="price"
           />
         </Provider>
       </BrowserRouter>,
