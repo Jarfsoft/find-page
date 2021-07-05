@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar render Snapshot check should render Navbar section 1`] = `
+<nav
+  className="nav"
+>
+  <a
+    href="/favorites"
+    onClick={[Function]}
+  >
+    Favorites
+  </a>
+  <h1
+    className="head"
+  >
+    Devices
+  </h1>
+  <a
+    href="/start"
+    onClick={[Function]}
+  >
+    Get in
+  </a>
+</nav>
+`;

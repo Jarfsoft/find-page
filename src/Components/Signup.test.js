@@ -5,41 +5,42 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import { BrowserRouter } from 'react-router-dom';
-import Home from './Home';
+import Signup from './Signup';
 
-describe('Home render', () => {
+describe('Navbar render', () => {
   const mockStore = configureStore();
   let store;
   const state = { 
-    devices: [],
+    users: {
+      userId: 0,
+      name: '',
+    },
   };
 
   describe('Snapshot check', () => {
-    it('should render Home section', () => {
+    it('should render Signin component', () => {
       store = mockStore(state);
-      const home = renderer
+      const signup = renderer
         .create(
           <Provider store={store}>
             <BrowserRouter>
-              <Home />
+              <Signup />
             </BrowserRouter>
           </Provider>
         ).toJSON();
-      expect(home).toMatchSnapshot();
+      expect(signup).toMatchSnapshot();
     });
   });
-  describe('Home contains', () => {
-    it('should have div', () => {
-      const home = render(
+  it('should containt a form', () => {
+    store = mockStore(state);
+    const signup = render(
+      <BrowserRouter>
         <Provider store={store}>
-          <BrowserRouter>
-            <Home />
-          </BrowserRouter>
+          <Signup />
         </Provider>
-      );
-      const div = home.container.querySelectorAll('div');
-      expect(div).toHaveLength(1);
-    });
+      </BrowserRouter>,
+    );
+    const form = signup.container.querySelectorAll('form');
+    expect(form).toHaveLength(1);
   });
 });
-

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home render Snapshot check should render Home section 1`] = `
+<div
+  className="App"
+/>
+`;

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar render Snapshot check should render Signin component 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <h1>
+    Name:
+  </h1>
+  <br />
+  <input
+    id="name"
+    name="name"
+    onChange={[Function]}
+    required={true}
+    type="text"
+  />
+  <br />
+  <input
+    className="submit-btn"
+    type="submit"
+    value="Sign in"
+  />
+  <br />
+</form>
+`;

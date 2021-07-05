@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar render Snapshot check should render Device component 1`] = `
+<div
+  className="device-card"
+>
+  <img
+    alt="Device"
+    src="image"
+  />
+  <div
+    className="info"
+  >
+    <a
+      href="/device/id"
+      onClick={[Function]}
+    >
+      name
+    </a>
+    <span>
+      $ price
+    </span>
+  </div>
+</div>
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Favorites render Snapshot check should render Favorites section 1`] = `
+<div
+  className="App"
+/>
+`;

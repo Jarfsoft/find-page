@@ -23,7 +23,15 @@ function Favorites() {
     <div className="App">
       {devices.filter(
         ((d) => favorites.find((f) => f.device_ID === d.id) !== undefined),
-      ).map((d) => <Device key={d.name} data={d} />)}
+      ).map((d) => (
+        <Device
+          key={d.name}
+          imageUrl={d.image_url}
+          id={d.id}
+          name={d.name}
+          price={d.price}
+        />
+      ))}
     </div>
   );
 }

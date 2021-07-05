@@ -5,41 +5,41 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import { BrowserRouter } from 'react-router-dom';
-import Home from './Home';
+import Favorites from './Favorites';
 
-describe('Home render', () => {
+describe('Favorites render', () => {
   const mockStore = configureStore();
   let store;
   const state = { 
     devices: [],
+    favorites: [],
   };
 
   describe('Snapshot check', () => {
-    it('should render Home section', () => {
+    it('should render Favorites section', () => {
       store = mockStore(state);
-      const home = renderer
+      const favorites = renderer
         .create(
           <Provider store={store}>
             <BrowserRouter>
-              <Home />
+              <Favorites />
             </BrowserRouter>
           </Provider>
         ).toJSON();
-      expect(home).toMatchSnapshot();
+      expect(favorites).toMatchSnapshot();
     });
   });
-  describe('Home contains', () => {
+  describe('Favorites contains', () => {
     it('should have div', () => {
-      const home = render(
+      const favorites = render(
         <Provider store={store}>
           <BrowserRouter>
-            <Home />
+            <Favorites />
           </BrowserRouter>
         </Provider>
       );
-      const div = home.container.querySelectorAll('div');
+      const div = favorites.container.querySelectorAll('div');
       expect(div).toHaveLength(1);
     });
   });
 });
-
