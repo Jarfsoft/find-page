@@ -1,6 +1,6 @@
 # Find-Page
 
-> Aplication created with React and Redux for the Front-end and Rails was used to manage the Back-end. With this app you can browse between some home electronic home devices. There is a sign in and create acount feature. You can save your favorite devices in your account.
+> Aplication created with React and Redux for the Front-end and Rails was used to manage the Back-end. With this mobile app you can browse between some home electronic devices. There is a sign in and create acount feature. You can save your favorite devices in your account.
 
 ![screenshot](./screenshot.png)
 
