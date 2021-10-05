@@ -9,11 +9,13 @@ function Device({
 }) {
   return (
     <div className="device-card">
-      <img alt="Device" src={imageUrl} />
-      <div className="info">
-        <Link to={`/device/${id}`}>{name}</Link>
-        <span>{`$ ${price}`}</span>
-      </div>
+      <Link to={`/device/${id}`}>
+        <img alt="Device" src={imageUrl} />
+        <div className="info">
+          {name}
+          <span>{`$ ${price}`}</span>
+        </div>
+      </Link>
     </div>
   );
 }

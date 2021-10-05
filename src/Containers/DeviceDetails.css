@@ -1,7 +1,6 @@
 .details-frame {
   width: 85%;
   margin: 0 auto;
-  padding-bottom: 2rem;
   margin-bottom: 2rem;
   background-color: white;
   box-shadow: -2px 2px 32px -9px rgba(0, 0, 0, 0.75);
@@ -49,6 +48,10 @@
   }
 
   .info-device {
-    width: 85%;
+    width: 60%;
+  }
+
+  .image-container {
+    width: 40%;
   }
 }
