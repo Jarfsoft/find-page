@@ -35,8 +35,10 @@ function DeviceDetails() {
         {user.userId !== 0 ? callButton() : ''}
         <p>{`$ ${data.price}`}</p>
       </div>
-      <h1>About the device: </h1>
-      <p>{data.description}</p>
+      <div className="info-device">
+        <h1>About the device: </h1>
+        <p>{data.description}</p>
+      </div>
     </div>
   );
 }

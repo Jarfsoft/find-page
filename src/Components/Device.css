@@ -3,6 +3,9 @@
   margin: 0 auto;
   margin-bottom: 2rem;
   background-color: white;
+  box-shadow: -2px 2px 32px -9px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -2px 2px 32px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 2px 32px -9px rgba(0, 0, 0, 0.75);
 }
 
 .device-card img {

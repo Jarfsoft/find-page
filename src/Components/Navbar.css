@@ -3,6 +3,8 @@
   justify-content: space-around;
   text-align: center;
   font-size: small;
+  background-color: white;
+  margin-bottom: 2rem;
 }
 
 .nav a {

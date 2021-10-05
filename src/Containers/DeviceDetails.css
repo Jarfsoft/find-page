@@ -4,6 +4,9 @@
   padding-bottom: 2rem;
   margin-bottom: 2rem;
   background-color: white;
+  box-shadow: -2px 2px 32px -9px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -2px 2px 32px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 2px 32px -9px rgba(0, 0, 0, 0.75);
 }
 
 .details-frame img {
@@ -38,4 +41,14 @@
   position: absolute;
   top: 8px;
   right: 16px;
+}
+
+@media (min-width: 650px) {
+  .details-frame {
+    display: flex;
+  }
+
+  .info-device {
+    width: 85%;
+  }
 }
