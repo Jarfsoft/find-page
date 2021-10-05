@@ -27,7 +27,7 @@ function Signin() {
   };
 
   useEffect(() => {
-    if (user !== 0) {
+    if (user > 0) {
       history.push('/');
       getFavorites(setFavorites);
     }
@@ -44,6 +44,7 @@ function Signin() {
       <br />
       <input className="submit-btn" type="submit" value="Sign in" />
       <br />
+      {user === -1 && <div className="loading" />}
       {errors ? errors.map((e) => (
         <>
           <p>{e}</p>

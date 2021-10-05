@@ -1,4 +1,5 @@
 const getUser = (name, setUser) => {
+  setUser(-1);
   fetch('https://jarfsoft-houses-api.herokuapp.com/users')
     .then((response) => response.json())
     .then((json) => {

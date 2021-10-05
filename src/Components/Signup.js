@@ -22,7 +22,7 @@ function Signup() {
   const history = useHistory();
 
   useEffect(() => {
-    if (user !== 0) {
+    if (user > 0) {
       history.push('/');
     }
   }, [user]);
@@ -37,6 +37,8 @@ function Signup() {
       <input id="name" required type="text" name="name" value={name} onChange={changeHandler} />
       <br />
       <input className="submit-btn" type="submit" value="Sign up" />
+      <br />
+      {user === -1 && <div className="loading" />}
       {errors ? errors.map((e) => (
         <>
           <p>{e}</p>

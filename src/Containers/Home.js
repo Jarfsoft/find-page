@@ -18,7 +18,7 @@ function Home() {
   }, []);
   return (
     <div className="App">
-      {devices.map((d) => (
+      {devices ? devices.map((d) => (
         <Device
           key={d.name}
           imageUrl={d.image_url}
@@ -26,7 +26,7 @@ function Home() {
           name={d.name}
           price={d.price}
         />
-      ))}
+      )) : <div className="loading" />}
     </div>
   );
 }
